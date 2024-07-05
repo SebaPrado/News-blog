@@ -1,0 +1,126 @@
+/* Colocar aquí CSS "propio" */
+#footer {
+  height: 10rem;
+  width: 100%;
+}
+
+#navbar-logo {
+  color: white;
+  font-weight: 700;
+}
+
+#navbar-button {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#navbar-button:hover {
+  background-color: #0056b3;
+}
+
+#navbar-button:active {
+  background-color: #00427f;
+}
+
+#navbar-button-new {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#navbar-button-new:hover {
+  background-color: #218838;
+}
+
+#navbar-button-new:active {
+  background-color: #1e7e34;
+}
+
+#edit-button,
+#delete-button {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  width: 90%;
+}
+
+#edit-button {
+  background-color: #ffc107;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+#delete-button {
+  background-color: transparent;
+  color: #dc3545;
+  margin-left: 12px;
+  margin-right: 12px;
+  border: 1px solid #dc3545;
+}
+
+#edit-button:hover {
+  background-color: #ffca28;
+}
+
+#delete-button:hover {
+  border-color: #6c757d;
+  background-color: #c90818;
+  color: white;
+}
+
+.hero-wrapper-img {
+  background-image: url("../imagenes/jess-bailey-q10VITrVYUM-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+h2 {
+  font-weight: 800;
+}
+h3 {
+  font-weight: 600;
+}
+
+h6 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.home-container {
+  width: 45rem;
+}
+
+.home-article-links {
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+}

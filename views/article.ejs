@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <%- include('partials/navbar')%>
+      <div class="d-flex align-items-center justify-content-center hero-wrapper-img">
+        <div class="d-flex flex-column justify-content-start home-container">
+          <h1><%=article.title%></h1>
+          <div class="d-flex text-light">
+            <small>Creado por <%=article.user.firstname%><%=article.user.lastname%> </small>
+            <small> el <%=article.createdAt%></small>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="mb-5 home-container">
+          <div class="mt-5">
+            <p><%=article.content%></p>
+          </div>
+          <hr class="my-5" />
+          <h3 class="mb-3">Add your comment</h3>
+          <form action="/comentarios" method="post">
+            <select name="autor" class="form-select mb-3" aria-label="Default select example">
+              <option selected>Select author...</option>
+              <%for(const user of users){ %>
+              <option value="<%=user.id%>"><%=user.firstname%> <%=user.lastname%></option>
+              <%}%>
+            </select>
+            <div class="mb-3">
+              <textarea
+                name="comentario"
+                placeholder="Your comment..."
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <input type="text" name="articleId" id="articleId" value="<%=article.id%>" hidden />
+            <button class="btn btn-primary w-100 mb-5" type="submit">Send</button>
+          </form>
+          <h3 class="mb-3">Comments</h3>
+          <div class="mb-3">
+            <%for(const comment of comments) { %>
+            <p><%=comment.content%></p>
+            <div class="d-flex mb-3">
+              <%=comment.userId.firstname%> <%=comment.userId.lastname%>
+            </div>
+            <hr class="my-4" />
+            <%}%>
+          </div>
+        </div>
+      </div>
+      <footer><%- include ('partials/footer') %></footer>
+    </header>
+  </body>
+</html>
