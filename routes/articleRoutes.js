@@ -6,7 +6,6 @@ const escritor = require("../middlewares/escritor");
 const admin = require("../middlewares/admin");
 
 // Rutas relacionadas a los artículos:
-// ...
 
 router.get("/", articleController.index);
 router.get("/crear", ensureIsAuthenticated, escritor, articleController.create);
